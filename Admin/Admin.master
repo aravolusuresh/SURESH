@@ -1,0 +1,128 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <script type="text/javascript">history.forward(false)</script>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Script Writer</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2 {
+            font-family: Verdana;
+            text-decoration: underline;
+            color: #FF3300;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="body_wrapper">
+            <div id="container">
+                <div id="page_header">
+                    <div id="header_title">
+                    </div>
+                    <div id="header_links">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <ul>
+                            <li>
+                                <asp:LoginStatus ID="LoginStatus2" runat="server"
+                                    OnLoggedOut="LoginStatus2_LoggedOut" />
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div id="header_navmenu">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <ul>
+
+                            <asp:TreeView ID="TreeView1" runat="server" Height="164px" ShowLines="True"
+                                Width="152px">
+                                <Nodes>
+                                    <asp:TreeNode NavigateUrl="~/Admin/cp.aspx" Text="Change Password"
+                                        Value="Change Password"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Admin/AdminHome.aspx" Text="AdminHome"
+                                        Value="AdminHome"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Admin/Viewfeedbacks.aspx" Text="ViewFeedbacks"
+                                        Value="ViewFeedbacks"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Admin/viewWriterprofiles.aspx"
+                                        Text="ViewWritersProfiles" Value="ViewWritersProfiles"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/Admin/ViewEditorsProfiles.aspx"
+                                        Text="ViewEditorProfiles" Value="ViewEditorProfiles"></asp:TreeNode>
+                                </Nodes>
+                            </asp:TreeView>
+
+                        </ul>
+                    </div>
+
+                    <div class="clearthis">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div>
+
+                    <div style="background-color: #C0C0C0">
+                        <br />
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <br />
+                        <br />
+                    </div>
+
+
+                </div>
+
+                <div class="clearthis">
+                    &nbsp;
+                </div>
+
+                <!-- Start of Page Footer -->
+                <div id="page_footer">
+                    <div id="page_footer_box">
+                        <!-- Start of Footer Links -->
+                        <div id="footer_links">
+                            <ul>
+                                <li><a href="../AboutUs.aspx">About us</a></li>
+                                <li><a href="../MeetUs.aspx">Meet us</a></li>
+                                <li><a href="../Scripts.aspx">Scripts</a></li>
+                                <li><a href="../Search.aspx">Search</a></li>
+                                <li><a href="../FeedBack.aspx">FeedBacks</a></li>
+                                <li><a href="../Writers.aspx">Writers</a></li>
+                                <li><a href="../MeetUs.aspx">Contact Us</a></li>
+                            </ul>
+                            <div class="clearthis">
+                                &nbsp;
+                            </div>
+                        </div>
+
+                        <p>
+                            Web design by NPU Students
+                        </p>
+                        <p>
+                            Copyrights © All Rights reserved by ®<br />
+
+                        </p>
+                    </div>
+                </div>
+                <!-- End of Page Footer -->
+                <div class="clearthis">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</body>
+</html>
